@@ -1,0 +1,17 @@
+html, body{
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+.headerTitle {
+  margin-left: 1em;
+}
+
+a.active {
+  background-color: gray;
+}
+
+.footerTitle {
+  display: inline-block;
+  text-align: center;
+}
