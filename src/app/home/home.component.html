@@ -1,13 +1,38 @@
 <div class="container">
 
-  <div class="left">
-    <h1 x-large class="sample-content">Reports</h1>
+  <div class="row">
+    <div class="col-8">
+      <h1 x-large class="sample-content text-left">Reports</h1>
+      <table class="table table-hover">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Report</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">MMS_Report_X</td>
+            <td>07/11/2017</td>
+            <td>
+              <button>
+                <i class="material-icons">file_download</i>
+              </button>
+              <button>
+                <i class="material-icons rounded-circle">email</i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-4 text-center">
+      <button class="btn-primary rounded text-button">Generate Report</button>
+        <h1 x-large class="sample-content">Filter by date</h1>
+        <ngb-datepicker></ngb-datepicker>
 
-  </div>
-  
-  <div class="right">
-    <h1 x-large class="sample-content">Filter by date</h1>
-    
+    </div>
   </div>
 
 </div>

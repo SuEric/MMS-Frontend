@@ -1,20 +1,5 @@
 /*styles for home content only*/
 
 .container {
-  margin-top: 1em;
   padding: 1em;
-}
-
-.left {
-  display: inline-block;
-  margin-right: 1em;
-  width: 40%;
-  text-align: center;
-}
-
-.right {
-  display: inline-block;
-  margin-left: 1em;
-  width: 40%;
-  text-align: center;
 }

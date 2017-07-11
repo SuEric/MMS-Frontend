@@ -3,8 +3,14 @@ html, body{
   font-family: Roboto, sans-serif;
 }
 
-.headerTitle {
-  margin-left: 1em;
+main {
+  min-height: 480px;
+}
+
+.right-nav > button {
+  background: none;
+  margin-right: 1em;
+  border: none;
 }
 
 a.active {

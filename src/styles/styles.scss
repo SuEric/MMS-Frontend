@@ -3,9 +3,23 @@
 @import 'variables';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+.navbar {
+  background-color: white;
+  box-shadow: 0 4px 2px -2px gray;
+  color: black;
+}
+
 footer {
   background-color: $bd-color;
   color: white;
   font-size: 10px;
-  padding: 2em;
+  padding: 4em 2em;
+}
+
+a {
+  color: black;
+}
+
+.text-button {
+  padding: 0.5em 1em;
 }
