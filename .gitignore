@@ -32,6 +32,9 @@ testem.log
 #System Files
 .DS_Store
 
+# Cache
+.awcache
+
 ### OSX ###
 *.DS_Store
 .AppleDouble
