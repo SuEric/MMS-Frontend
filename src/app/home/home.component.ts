@@ -3,8 +3,6 @@ import {
   OnInit,
 } from '@angular/core';
 
-import { DataSource } from '@angular/cdk';
-
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
@@ -30,7 +28,6 @@ import { XLargeDirective } from './x-large';
 export class HomeComponent implements OnInit {
   public displayedColumns = ['userName', 'userId'];
   public exampleDatabase = new ExampleDatabase();
-  public dataSource: ExampleDataSource | null;
   public localState = { value: '' };
 
   constructor(
@@ -40,7 +37,6 @@ export class HomeComponent implements OnInit {
 
   public ngOnInit() {
     console.log('hello `Home` component');
-    this.dataSource = new ExampleDataSource(this.exampleDatabase);
   }
 
   public submitState(value: string) {
@@ -88,31 +84,4 @@ export class ExampleDatabase {
   }
 }
 
-export class ExampleDataSource extends DataSource<any> {
-  _filterChange = new BehaviorSubject('');
-  get filter(): string { return this._filterChange.value; }
-  set filter(filter: string) { this._filterChange.next(filter); }
-
-  constructor(private _exampleDatabase: ExampleDatabase) {
-    super();
-  }
-
-  /** Connect function called by the table to retrieve one stream containing the data to render. */
-  connect(): Observable<ReportData[]> {
-    const displayDataChanges = [
-      this._exampleDatabase.dataChange,
-      this._filterChange,
-    ];
-
-    return Observable.merge(...displayDataChanges).map(() => {
-      return this._exampleDatabase.data.slice().filter((item: ReportData) => {
-        let searchStr = (item.name).toLowerCase();
-        return searchStr.indexOf(this.filter.toLowerCase()) != -1;
-      });
-    });
-  }
-
-  disconnect() {}
-
-}
 /* tslint:enable */

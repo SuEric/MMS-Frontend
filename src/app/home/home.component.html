@@ -1,42 +1,13 @@
 <div class="container">
 
   <div class="left">
-    <h1>Reports</h1>
-    
-    <div class="example-container mat-elevation-z8">
-      <div class="example-header">
-        <md-input-container floatPlaceholder="never">
-          <input mdInput #filter placeholder="Filter reports">
-        </md-input-container>
-      </div>
+    <h1 x-large class="sample-content">Reports</h1>
 
-      <md-table #table [dataSource]="dataSource">
-
-        <!-- Name Column -->
-        <ng-container cdkColumnDef="userName">
-          <md-header-cell *cdkHeaderCellDef> Report Name </md-header-cell>
-          <md-cell *cdkCellDef="let row"> {{row.name}} </md-cell>
-        </ng-container>
-
-        <!-- ID Column -->
-        <ng-container cdkColumnDef="userId">
-          <md-header-cell *cdkHeaderCellDef> Date </md-header-cell>
-          <md-cell *cdkCellDef="let row"> {{row.id}} </md-cell>
-        </ng-container>
-
-        <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
-        <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
-      </md-table>
-    </div>
   </div>
   
   <div class="right">
     <h1 x-large class="sample-content">Filter by date</h1>
-    <md-input-container>
-      <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
-      <button mdSuffix [mdDatepickerToggle]="picker"></button>
-    </md-input-container>
-    <md-datepicker #picker></md-datepicker>
+    
   </div>
 
 </div>

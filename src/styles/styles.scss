@@ -2,16 +2,6 @@
 /* This file is for setting global styles  */
 @import 'variables';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
-.mat-toolbar.mat-primary {
-  box-shadow: 0 4px 2px -2px gray;
-}
-
-.mat-toolbar.mat-primary {
-  background-color: white;
-  color: black;
-}
 
 footer {
   background-color: $bd-color;

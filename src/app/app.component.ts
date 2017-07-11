@@ -19,13 +19,6 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-    <md-toolbar color="primary">
-      <img [src]="headerLogo">
-      <span class="headerTitle">{{ name }}</span>
-      <md-icon class="material-icons">notifications</md-icon>
-      <md-icon class="material-icons">person</md-icon>
-    </md-toolbar>
-
     <main>
       <router-outlet></router-outlet>
     </main>

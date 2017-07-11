@@ -3,20 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import
-{
-  MaterialModule,
-  MdSidenavModule,
-  MdToolbarModule,
-  MdTableModule,
-  MdDatepickerModule,
-  MdNativeDateModule,
-  MdSort
-}
-from '@angular/material';
-
-import { CdkTableModule } from '@angular/cdk';
-
 import {
   NgModule,
   ApplicationRef
@@ -80,14 +66,7 @@ type StoreType = {
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
-    MaterialModule,
-    MdToolbarModule,
-    MdSidenavModule,
-    MdTableModule,
-    MdDatepickerModule,
-    MdNativeDateModule,
-    CdkTableModule
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
