@@ -30,6 +30,8 @@ import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
+import { ReportTableComponent } from './home/report-table';
+import { ReportFormComponent } from './home/report-form';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 
@@ -56,8 +58,16 @@ type StoreType = {
   declarations: [
     AppComponent,
     HomeComponent,
+    ReportTableComponent,
+    ReportFormComponent,
     NoContentComponent,
     XLargeDirective
+  ],
+  /**
+   * Components created dynamically
+   */
+  entryComponents: [
+    ReportFormComponent,
   ],
   /**
    * Import Angular's modules.
@@ -76,7 +86,7 @@ type StoreType = {
   providers: [
     ENV_PROVIDERS,
     APP_PROVIDERS
-  ]
+  ],
 })
 export class AppModule {
 

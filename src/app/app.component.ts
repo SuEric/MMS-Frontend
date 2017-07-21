@@ -25,7 +25,7 @@ import { AppState } from './app.service';
           <img [src]="headerLogo">
         </div>
         <div class="left-nav col-6 text-center">
-          <a class="navbar-brand" href="/"> {{ name }} </a>
+          <a class="navbar-brand"> {{ name }} </a>
         </div>
         <div class="right-nav col-4 text-right">
             <i class="material-icons">person</i>

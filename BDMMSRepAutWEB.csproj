@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -120,6 +121,13 @@
     </Content>
     <Content Include="package.json" />
     <Content Include="protractor.conf.js" />
+    <Content Include="src\app\home\report-form\report-form.component.css" />
+    <Content Include="src\app\home\report-form\report-form.component.html" />
+    <Content Include="src\app\home\report-table\report-table.component.css" />
+    <Content Include="src\app\home\report-table\report-table.component.html" />
+    <Content Include="src\assets\css\bootstrap.min.css" />
+    <Content Include="src\assets\img\bd-logo-white.png" />
+    <Content Include="src\assets\img\bd-logo.png" />
     <Content Include="webpack.config.js" />
     <Content Include="tsconfig.json" />
     <Content Include="tsconfig.webpack.json" />
@@ -175,9 +183,6 @@
     <Content Include="src\assets\icon\ms-icon-150x150.png" />
     <Content Include="src\assets\icon\ms-icon-310x310.png" />
     <Content Include="src\assets\icon\ms-icon-70x70.png" />
-    <Content Include="src\assets\img\angular-logo.png" />
-    <Content Include="src\assets\img\angularclass-avatar.png" />
-    <Content Include="src\assets\img\angularclass-logo.png" />
     <Content Include="src\assets\manifest.json" />
     <Content Include="src\assets\mock-data\mock-data.json" />
     <Content Include="src\assets\robots.txt" />
@@ -228,6 +233,10 @@
     <TypeScriptCompile Include="src\app\home\home.component.ts" />
     <TypeScriptCompile Include="src\app\home\home.e2e.ts" />
     <TypeScriptCompile Include="src\app\home\index.ts" />
+    <TypeScriptCompile Include="src\app\home\report-form\index.ts" />
+    <TypeScriptCompile Include="src\app\home\report-form\report-form.component.ts" />
+    <TypeScriptCompile Include="src\app\home\report-table\index.ts" />
+    <TypeScriptCompile Include="src\app\home\report-table\report-table.component.ts" />
     <TypeScriptCompile Include="src\app\home\title\index.ts" />
     <TypeScriptCompile Include="src\app\home\title\title.service.spec.ts" />
     <TypeScriptCompile Include="src\app\home\title\title.service.ts" />
@@ -237,6 +246,9 @@
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\no-content\index.ts" />
     <TypeScriptCompile Include="src\app\no-content\no-content.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\index.ts" />
+    <TypeScriptCompile Include="src\app\shared\report.model.ts" />
+    <TypeScriptCompile Include="src\app\shared\report.service.ts" />
     <TypeScriptCompile Include="src\custom-typings.d.ts" />
     <TypeScriptCompile Include="src\main.browser.aot.ts" />
     <TypeScriptCompile Include="src\main.browser.ts" />
@@ -247,6 +259,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

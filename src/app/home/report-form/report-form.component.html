@@ -1,0 +1,29 @@
+<div class="modal-header">
+  <h4 class="modal-title">Generate report</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="form-group">
+      <label>Date range</label>
+      <div class="input-group">
+        <input class="form-control" placeholder="yyyy-mm-dd"
+              name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-addon" (click)="d.toggle()" >
+          <i class="material-icons">date_range</i>
+        </div>
+      </div>
+    </div>
+    <div class="form-group text-left">
+      <label>Report</label>
+      <input class="form-control" type="text" placeholder="Report name">
+      <textarea rows="4" cols="56" placeholder="Header text"></textarea>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.close('Close click')">Cancel</button>
+  <button type="button" class="btn btn-secondary" (click)="activeModal.close('Close click')">Generate</button>
+</div>
