@@ -50,9 +50,9 @@ describe(`App`, () => {
   });
 
   it(`should be @AngularClass`, () => {
-    expect(comp.url).toEqual('https://twitter.com/AngularClass');
-    expect(comp.angularclassLogo).toEqual('assets/img/angularclass-avatar.png');
-    expect(comp.name).toEqual('Angular 2 Webpack Starter');
+    expect(comp.headerLogo).toEqual('assets/img/bd-logo.png');
+    expect(comp.footerLogo).toEqual('assets/img/bd-logo-white.png');
+    expect(comp.name).toEqual('MMS Resource Automation Reports');
   });
 
   it('should log ngOnInit', () => {

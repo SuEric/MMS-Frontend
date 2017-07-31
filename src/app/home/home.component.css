@@ -1,20 +1,18 @@
 /*styles for home content only*/
 
+h1 {
+  margin: 1rem 0;
+}
+
 .container {
-  margin-top: 1em;
-  padding: 1em;
+  margin-top: 1rem;
 }
 
-.left {
-  display: inline-block;
-  margin-right: 1em;
-  width: 40%;
-  text-align: center;
+.form-group {
+  display: block;
+  margin-bottom: 1rem;
 }
 
-.right {
-  display: inline-block;
-  margin-left: 1em;
-  width: 40%;
-  text-align: center;
+.reportButton {
+  margin: 0.5rem 0;
 }

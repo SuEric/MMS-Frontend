@@ -1,42 +1,30 @@
 <div class="container">
 
-  <div class="left">
-    <h1>Reports</h1>
+  <div class="row">
     
-    <div class="example-container mat-elevation-z8">
-      <div class="example-header">
-        <md-input-container floatPlaceholder="never">
-          <input mdInput #filter placeholder="Filter reports">
-        </md-input-container>
-      </div>
-
-      <md-table #table [dataSource]="dataSource">
-
-        <!-- Name Column -->
-        <ng-container cdkColumnDef="userName">
-          <md-header-cell *cdkHeaderCellDef> Report Name </md-header-cell>
-          <md-cell *cdkCellDef="let row"> {{row.name}} </md-cell>
-        </ng-container>
-
-        <!-- ID Column -->
-        <ng-container cdkColumnDef="userId">
-          <md-header-cell *cdkHeaderCellDef> Date </md-header-cell>
-          <md-cell *cdkCellDef="let row"> {{row.id}} </md-cell>
-        </ng-container>
-
-        <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
-        <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
-      </md-table>
+    <div class="col-8">
+      <h1 x-large class="sample-content text-left">Reports</h1>
+      <report-table [reports]="filteredReports ? filteredReports : reports"></report-table>
     </div>
-  </div>
-  
-  <div class="right">
-    <h1 x-large class="sample-content">Filter by date</h1>
-    <md-input-container>
-      <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
-      <button mdSuffix [mdDatepickerToggle]="picker"></button>
-    </md-input-container>
-    <md-datepicker #picker></md-datepicker>
+
+    <div class="col-4 text-center">
+      <div class="row">
+
+        <div class="col-12 text-center">
+          <button class="btn-primary rounded text-button reportButton" (click)="open()">Generate Report</button>
+        </div>
+        
+        <div class="col-12 text-center">
+          <button class="btn-primary rounded text-button reportButton" (click)="todayReports(); dp.navigateTo();">Today</button>
+        </div>
+
+        <div class="col-12 text-center">
+          <h1 x-large class="sample-content">Filter by date</h1>
+          <ngb-datepicker #dp [(ngModel)]="date" (ngModelChange)="filterReports()"></ngb-datepicker>
+        </div>
+        
+      </div>
+    </div>
   </div>
 
 </div>

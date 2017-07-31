@@ -3,8 +3,20 @@ html, body{
   font-family: Roboto, sans-serif;
 }
 
-.headerTitle {
-  margin-left: 1em;
+main {
+  min-height: 480px;
+  padding: 1em;
+}
+
+.right-nav > button {
+  background: none;
+  margin-right: 1em;
+  border: none;
+}
+
+.text-right > a {
+  margin-right: 0.5em;
+  text-decoration: none;
 }
 
 a.active {

@@ -1,14 +1,17 @@
-/**
- * Angular 2
- */
 import {
   enableDebugTools,
   disableDebugTools
 } from '@angular/platform-browser';
+
 import {
   ApplicationRef,
   enableProdMode
 } from '@angular/core';
+
+import {
+  ReportService
+} from './shared';
+
 /**
  * Environment Providers
  */
@@ -16,6 +19,7 @@ let PROVIDERS: any[] = [
   /**
    * Common env directives
    */
+  ReportService
 ];
 
 /**

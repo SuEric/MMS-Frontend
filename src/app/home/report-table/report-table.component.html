@@ -1,0 +1,24 @@
+<table class="table table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Report</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let report of reports">
+      <td scope="row">{{report.name}}</td>
+      <td>{{ formatDate(report.date, 'MM/DD/YYYY') }}</td>
+      <td>
+        <button>
+          <i class="material-icons">file_download</i>
+        </button>
+        <button>
+          <i class="material-icons rounded-circle">email</i>
+         </button> 
+      </td>
+    </tr>
+  </tbody>
+</table>
+  

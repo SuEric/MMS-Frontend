@@ -19,20 +19,38 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-    <md-toolbar color="primary">
-      <img [src]="headerLogo">
-      <span class="headerTitle">{{ name }}</span>
-      <md-icon class="material-icons">notifications</md-icon>
-      <md-icon class="material-icons">person</md-icon>
-    </md-toolbar>
+    <nav class="navbar container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <img [src]="headerLogo">
+        </div>
+        <div class="left-nav col-6 text-center">
+          <a class="navbar-brand"> {{ name }} </a>
+        </div>
+        <div class="right-nav col-4 text-right">
+          <a href="#">
+            <i class="material-icons">person</i>
+          </a>
+          <a href="#">
+            <i class="material-icons">notifications</i>
+          </a>
+        </div>        
+      </div>
+    </nav>
 
     <main>
       <router-outlet></router-outlet>
     </main>
 
-    <footer>
-      <img [src]="footerLogo">
-      <span class="footerTitle">{{ footer }}</span>
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <img [src]="footerLogo">
+        </div>
+        <div class="col-10 text-center">
+          <span class="footerTitle">{{ footer }}</span>
+        </div>
+      </div>
     </footer>
   `
 })
@@ -41,7 +59,8 @@ export class AppComponent implements OnInit {
   public footerLogo = 'assets/img/bd-logo-white.png';
   public name = 'MMS Resource Automation Reports';
   public footer = '© 2017 BD. All rights reserved. \
-  Unless otherwise noted, BD, the BD Logo and all .';
+    Unlessotherwisenoted, BD, the BD Logo and all other \
+    trademarks are property of Becton, Dickinson and Company.';
 
   constructor(
     public appState: AppState

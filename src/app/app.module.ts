@@ -2,20 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import
-{
-  MaterialModule,
-  MdSidenavModule,
-  MdToolbarModule,
-  MdTableModule,
-  MdDatepickerModule,
-  MdNativeDateModule,
-  MdSort
-}
-from '@angular/material';
-
-import { CdkTableModule } from '@angular/cdk';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {
   NgModule,
@@ -43,6 +30,8 @@ import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
+import { ReportTableComponent } from './home/report-table';
+import { ReportFormComponent } from './home/report-form';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 
@@ -69,25 +58,27 @@ type StoreType = {
   declarations: [
     AppComponent,
     HomeComponent,
+    ReportTableComponent,
+    ReportFormComponent,
     NoContentComponent,
     XLargeDirective
+  ],
+  /**
+   * Components created dynamically
+   */
+  entryComponents: [
+    ReportFormComponent,
   ],
   /**
    * Import Angular's modules.
    */
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
-    MaterialModule,
-    MdToolbarModule,
-    MdSidenavModule,
-    MdTableModule,
-    MdDatepickerModule,
-    MdNativeDateModule,
-    CdkTableModule
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
@@ -95,7 +86,7 @@ type StoreType = {
   providers: [
     ENV_PROVIDERS,
     APP_PROVIDERS
-  ]
+  ],
 })
 export class AppModule {
 
